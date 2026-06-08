@@ -1,21 +1,8 @@
 import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { ArrowLeft, Clock, Users, Star, BookOpen, CheckCircle, Target, UserCheck, Database, Briefcase, ChevronDown, ChevronUp, Play, FileText, CheckCircle2, Circle, ChevronRight, Award, TrendingUp, Brain, ShoppingCart, Layers, LineChart, MessageSquare, Globe, DollarSign, Heart } from 'lucide-react'
+import { ArrowLeft, Clock, Users, Star, BookOpen, CheckCircle, Target, UserCheck, Database, Briefcase, ChevronDown, ChevronUp, Play, FileText, CheckCircle2, Circle, ChevronRight, Award } from 'lucide-react'
 import { getCourseById } from '../data/courses'
 import { getExercisesByCourse } from '../data/exercises'
-
-const courseIcons: Record<string, any> = {
-  '销售数据清洗与分析': TrendingUp,
-  '客户行为分析': Users,
-  '购物车分析': ShoppingCart,
-  '聚类分析': Layers,
-  '时间序列分析': LineChart,
-  '社交媒体数据分析': MessageSquare,
-  '网站流量分析': Globe,
-  '金融数据分析': DollarSign,
-  '健康数据分析': Heart,
-  '市场调研数据分析': Brain
-}
 
 export default function CourseDetail() {
   const { id } = useParams<{ id: string }>()
